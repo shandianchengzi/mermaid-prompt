@@ -25,4 +25,33 @@
 ```
 
 效果示例：
-<img width="1004" height="795" alt="image" src="https://github.com/user-attachments/assets/5f27785d-eb37-494b-977a-ddb0ff4bcaf8" />
+```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
+graph TB
+
+    subgraph Box [" "]
+        direction TB
+
+        %% 节点定义
+        A[1. 认知架构与长期记忆]
+        B[2. 跨模态感知与具身交互]
+        C[3. 复杂任务拆解与自主规划]
+        D[4. 多智能体协作与社会化博弈]
+        E[物理/模拟环境]
+        F[全局最优目标]
+
+        %% 逻辑连接
+        A -- 经验检索与逻辑增强 --> C
+        B -- 环境数据输入 --> A
+        B -- 语义映射至执行 --> E
+        E -- 实时交互反馈 --> B
+        C -- 观察-评估闭环 --> B
+        C -- 子目标序列分配 --> D
+        D -- 协商分工与模仿学习 --> F
+        F -- 演化博弈结果反馈 --> D
+
+        %% 样式定义
+        classDef default font-family:'Microsoft YaHei',font-size:16px,fill:#FFFFFF,stroke:#000000,stroke-width:2px;
+        style Box fill:#FFFFFF,stroke:#000000,stroke-width:4px;
+    end
+```
